@@ -16,3 +16,12 @@ navBar.forEach(function(a){
         navCollapse.classList.remove("show");
     })
 })
+
+var modal = document.getElementById('form-appoinment')
+
+// When the user clicks anywhere outside of the modal, close it
+modal.onclick = function(event) {
+    if (!event.target.closest(".card-registration")) {
+        modal.style.display = "none";
+    }
+}

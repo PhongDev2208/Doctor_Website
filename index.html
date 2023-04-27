@@ -8,7 +8,8 @@
 
     <!-- FAVICON -->
     <!-- <link rel="icon" type="image/png" href="./assets/images/favicon.png"> -->
-    <link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/da0d1ac2/site_favicon_16_1641997296682.ico"/>
+    <link rel="icon" type="image/x-icon"
+        href="https://irp.cdn-website.com/da0d1ac2/site_favicon_16_1641997296682.ico" />
 
     <!-- Bootstrap 5 CDN Links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
@@ -26,7 +27,9 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img style="height: 43px;" decoding="async" src="https://lirp.cdn-website.com/da0d1ac2/dms3rep/multi/opt/Clinic4u-logo-1920w.png" class="img-fluid">
+                    <img style="height: 43px;" decoding="async"
+                        src="https://lirp.cdn-website.com/da0d1ac2/dms3rep/multi/opt/Clinic4u-logo-1920w.png"
+                        class="img-fluid">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,7 +81,135 @@
                         <p>Tham gia với chúng tôi với một môi trường nha khoa vui vẻ và thân thiện. Các chuyên gia của
                             chúng tôi đang làm việc rất chăm chỉ để nhìn thấy nụ cười trên khuôn mặt của bạn mà bạn xứng
                             đáng! Chúng tôi tận tâm với nhiệm vụ của mình.</p>
-                        <a href="#" class="main-btn mt-4 fill-btn">Đặt lịch hẹn</a>
+                        <a href="#" onclick="document.getElementById('form-appoinment').style.display='block'" class="main-btn mt-4 fill-btn">Đặt lịch hẹn</a>
+                        <!-- Form Appoinment -->
+                        <section id="form-appoinment" class="vh-100 gradient-custom modal form-appoinment">
+                            <div class="container py-5 h-100">
+                                <div class="row justify-content-center align-items-center h-100">
+                                    <div class="col-12 col-lg-9 col-xl-7">
+                                        <div class="card shadow-2-strong card-registration"
+                                            style="border-radius: 15px;">
+                                            <button onclick="document.getElementById('form-appoinment').style.display='none'" id='close'>close</button>
+                                            <div class="card-body p-4 p-md-5">
+                                                <div class="form-thumb text-center">
+                                                    <img width="100" height="100"
+                                                        src="./assets/images/logo_appoinment.jpg" alt="">
+                                                    <h3 class="mb-4 pb-2 pb-md-0 mb-md-2">Đặt lịch hẹn</h3>
+                                                    <p class="mb-4 pb-2 pb-md-0 mb-md-5">Vui lòng để lại thông tin đầy
+                                                        đủ theo mẫu bên dưới. <strong>Clinic</strong>
+                                                        sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
+                                                </div>
+                                                <form>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-4">
+
+                                                            <div class="form-outline">
+                                                                <input required name="Name" type="text" id="Name"
+                                                                    class="form-control form-control-lg" />
+                                                                <label class="form-label" for="Name">Họ tên</label>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 mb-4">
+
+                                                            <select required name="clinic" class="select form-control-lg fs-6">
+                                                                <option value="1" disabled>Chọn phòng khám</option>
+                                                                <option value="2">Chi nhánh 1</option>
+                                                                <option value="3">Chi nhánh 2</option>
+                                                            </select>
+                                                            <label class="form-label select-label">Chọn phòng
+                                                                khám</label>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                                            <div class="form-outline datepicker w-100">
+                                                                <input required name="dateAppoinment" type="datetime-local" class="form-control form-control-lg"
+                                                                    id="dateAppoinment" />
+                                                                <label for="dateAppoinment"
+                                                                    class="form-label">Ngày khám</label>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 mb-4">
+
+                                                            <h6 class="mb-2 pb-1">Giới tính: </h6>
+
+                                                            <div class="form-check form-check-inline">
+                                                                <input required class="form-check-input" type="radio"
+                                                                    name="sex" id="femaleGender"
+                                                                    value="option1" checked />
+                                                                <label class="form-check-label"
+                                                                    for="femaleGender">Nữ</label>
+                                                            </div>
+
+                                                            <div class="form-check form-check-inline">
+                                                                <input required class="form-check-input" type="radio"
+                                                                    name="sex" id="maleGender"
+                                                                    value="option2" />
+                                                                <label class="form-check-label"
+                                                                    for="maleGender">Nam</label>
+                                                            </div>
+
+                                                            <div class="form-check form-check-inline">
+                                                                <input required class="form-check-input" type="radio"
+                                                                    name="sex" id="otherGender"
+                                                                    value="option3" />
+                                                                <label class="form-check-label"
+                                                                    for="otherGender">Khác</label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-4 pb-2">
+
+                                                            <div class="form-outline">
+                                                                <input name="email" type="email" id="emailAddress"
+                                                                    class="form-control form-control-lg" />
+                                                                <label class="form-label"
+                                                                    for="emailAddress">Email</label>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 mb-4 pb-2">
+
+                                                            <div class="form-outline">
+                                                                <input required name="phoneNumber" type="tel" id="phoneNumber"
+                                                                    class="form-control form-control-lg" minlength="10" />
+                                                                <label class="form-label" for="phoneNumber">Số điện thoại</label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-12">
+
+                                                            <textarea name="MoreInfo" class="form-control" rows="3" placeholder="Mô tả bệnh (nếu có)"></textarea>
+                                                            <label class="form-label select-label">Thêm thông tin</label>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mt-4 pt-2">
+                                                        <input class="btn btn-primary btn-lg" type="submit"
+                                                            value="Gửi thông tin" />
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--End Form Appoinment -->
                         <a href="#" class="main-btn mt-4 ms-3">Xem Thêm</a>
                     </div>
                     <div class="col-md-6 order-md-2 order-1 mb-md-0 mb-5">
@@ -411,7 +542,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-8 col-10">
                     <h3>Đặt lịch hẹn và bắt đầu trang điểm nụ cười của bạn!</h3>
-                    <a href="#" class="mt-5 main-btn fill-btn">Đặt lịch hẹn</a>
+                    <a onclick="document.getElementById('form-appoinment').style.display='block'" href="#" class="mt-5 main-btn fill-btn">Đặt lịch hẹn</a>
                 </div>
             </div>
         </div>
@@ -490,7 +621,7 @@
                     <div class="contact-info">
                         <ul class="list-unstyled p-0">
                             <li><a href="#"><i class="fa fa-home me-3"></i>Đường Nguyễn Khuyến, KP5, phường Trảng Dài,
-                                TP. Biên Hòa, Tỉnh Đồng Nai</a></li>
+                                    TP. Biên Hòa, Tỉnh Đồng Nai</a></li>
                             <li><a href="#"><i class="fa fa-phone me-3"></i>+84 38 817 8062</a></li>
                             <li><a href="#"><i class="fa fa-envelope me-3"></i>172100257@dntu.edu.vn</a></li>
                         </ul>
